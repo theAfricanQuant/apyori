@@ -41,8 +41,7 @@ def test_normal():
         eq_(kwargs['max_length'], max_length)
         eq_(kwargs['min_support'], min_support)
         eq_(kwargs['min_confidence'], min_confidence)
-        for result in apriori_results:
-            yield result
+        yield from apriori_results
 
     def output_func_mock(record, output_file):
         """ Mock for apyori.output_func. """

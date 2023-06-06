@@ -51,8 +51,9 @@ def test_bad():
     Test for bad data.
     """
     test_data = RelationRecord(
-        set(['A']), 0.5,
-        [OrderedStatistic(frozenset([]), frozenset(['A']), 0.8, 1.2)]
+        {'A'},
+        0.5,
+        [OrderedStatistic(frozenset([]), frozenset(['A']), 0.8, 1.2)],
     )
     output_file = StringIO()
     dump_as_json(test_data, output_file)
